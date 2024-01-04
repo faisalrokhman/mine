@@ -1,7 +1,7 @@
 import pickle
 import streamlit as st
 st.set_page_config(
-    page_title="Riwayat Sekolah | faisal",
+    page_title="Cek Kesehatan | Diabetes",
     page_icon="👨‍🎓",
 )
 # membaca model
@@ -9,6 +9,7 @@ diabetes_model = pickle.load(open('diabetes_model.sav','rb'))
 
 #judul web
 st.title ('Data Mining Prediksi Diabetes')
+st.caption("*Isi Data Anda Supaya Mengetahui Terkena Diabetes Atau Tidak")
 col1, col2, = st.columns(2)
 with col1:
     Pregnancies = st.text_input('input nilain Pregnancies')
